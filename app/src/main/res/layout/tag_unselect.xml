@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/tag_unselect"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/DefaultColor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:padding="20dp"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="65dp"
+            android:src="@drawable/hashtag"
+            android:layout_height="65dp"
+            android:id="@+id/imageView10" />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="21dp"
+            android:text="Selecione uma hashtag"
+            android:textColor="#000"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="#000"
+            android:textAlignment="center"
+            android:textSize="14dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:text="Organizamos o feed por hashtag, escolha a que preferir, e então veja e publique ações ambientais por elas."
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>

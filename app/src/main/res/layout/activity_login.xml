@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/DefaultColor"
+    tools:context=".BoundaryClasses.ActivitiesClasses.LoginActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:src="@drawable/background"
+        android:scaleType="centerCrop"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/btnForgotPassword"
+            android:background="@android:color/transparent"
+            android:textSize="10sp"
+            android:text="esqueceu a senha ?"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_centerVertical="true"
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/user"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+
+            <EditText
+                android:id="@+id/inputEmail"
+                android:inputType="textEmailAddress"
+                android:textColor="#000"
+                android:hint="Email do usuário"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/padlock"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+
+            <EditText
+                android:id="@+id/inputPassword"
+                android:inputType="textPassword"
+                android:textColor="#000"
+                android:hint="Senha do usuário"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:text="LOGIN"
+            android:textColor="#fff"
+            android:background="@drawable/corner_green"
+            android:layout_marginTop="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <View
+                android:layout_marginTop="5dp"
+                android:layout_weight="30"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginRight="2dp"
+                android:background="#000"/>
+
+            <TextView
+                android:layout_weight="30"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:text="OU ENTRE COM"
+                android:textSize="11dp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_height="wrap_content"/>
+
+            <View
+                android:layout_marginTop="5dp"
+                android:layout_weight="30"
+                android:layout_marginLeft="2dp"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#000"/>
+        </LinearLayout>
+
+        <!-- Simulate Button -->
+        <LinearLayout
+            android:id="@+id/btnGoogle"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:background="@drawable/corner_google"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:src="@drawable/google_icon"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:textAlignment="center"
+                android:text="Google Plus"
+                android:textColor="#fff"
+                android:layout_marginRight="30dp"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:background="@drawable/corner_facebook"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:src="@drawable/facebook_icon"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:textAlignment="center"
+                android:text="Facebook"
+                android:textColor="#fff"
+                android:layout_marginRight="30dp"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include
+        android:visibility="gone"
+        layout="@layout/loading"/>
+
+</RelativeLayout>

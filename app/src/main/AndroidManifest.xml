@@ -30,7 +30,8 @@
         <activity android:name=".BoundaryClasses.ActivitiesClasses.EditPasswordActivity" />
         <activity android:name=".BoundaryClasses.ActivitiesClasses.PasswordForgotActivity" />
         <activity android:name=".BoundaryClasses.ActivitiesClasses.ReportActivity" />
-        <activity android:name=".BoundaryClasses.ActivitiesClasses.ContactActivity"></activity>
+        <activity android:name=".BoundaryClasses.ActivitiesClasses.ContactActivity" />
+        <activity android:name=".BoundaryClasses.ActivitiesClasses.EditPhotoActivity"></activity>
     </application>
 
 </manifest>

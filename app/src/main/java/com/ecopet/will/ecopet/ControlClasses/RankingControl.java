@@ -53,7 +53,7 @@ public class RankingControl {
     }
 
     private void getRanking(String tag, final View view){
-        FirebaseData.myRef.child("ranking").child(tag).addListenerForSingleValueEvent(new ValueEventListener() {
+        FirebaseData.myRef.child("ranking").child(tag).orderByChild("likes").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 List<UserLikeRanking> userLikeRankings = new ArrayList<>();
@@ -82,6 +82,8 @@ public class RankingControl {
         view.findViewById(R.id.loading).setVisibility(View.VISIBLE);
 
         tag = tag.replace("#","");
+        final String finalTag = tag;
+
 
         if (TagControl.getTimeDifference(tagToUpdate)) {
 
@@ -111,7 +113,7 @@ public class RankingControl {
                                     users.put(photo.getUid_user(), users.get(photo.getUid_user()) + likes);
 
                                     if (count == childrenCount) {
-                                        sortHash(users, view);
+                                        sortHash(users, view, finalTag);
                                     }
                                 }
 
@@ -138,17 +140,17 @@ public class RankingControl {
     }
 
 
-    private void sortHash(HashMap<String,Integer> hashMap, View view){
+    private void sortHash(HashMap<String,Integer> hashMap, View view, String tag){
         for(String key : hashMap.keySet()){
             userLikeRankings.add(new UserLikeRanking(key, hashMap.get(key)));
         }
 
         Collections.sort(userLikeRankings);
-        getUserName(userLikeRankings, view);
+        getUserName(userLikeRankings, view, tag);
     }
 
     private static int count2;
-    private void getUserName(final List<UserLikeRanking> userLikeRankings, final View view){
+    private void getUserName(final List<UserLikeRanking> userLikeRankings, final View view, final String tag){
         count2 = 0;
         for (final UserLikeRanking userLikeRanking: userLikeRankings){
             FirebaseData.myRef.child("users").child(userLikeRanking.getUserKey()).child("data").child("name").addListenerForSingleValueEvent(new ValueEventListener() {
@@ -161,12 +163,10 @@ public class RankingControl {
                             @Override
                             public void onComplete(@NonNull Task task) {
                                 if (task.isSuccessful())
-                                    showRanking(userLikeRankings, view);
+                                    getRanking(tag,view);
                             }
                         });
                     }
-
-
                 }
 
                 @Override

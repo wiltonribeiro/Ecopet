@@ -3,7 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".BoundaryClasses.ActivitiesClasses.HomeActivity">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_edit"
+        android:orderInCategory="100"
+        android:title="Editar"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_report"
         android:orderInCategory="100"
         android:title="Denunciar"
         app:showAsAction="never" />

@@ -13,6 +13,7 @@ import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ecopet.will.ecopet.BoundaryClasses.ActivitiesClasses.EditPhotoActivity;
 import com.ecopet.will.ecopet.BoundaryClasses.ActivitiesClasses.ReportActivity;
 import com.ecopet.will.ecopet.ControlClasses.FeedControl;
 import com.ecopet.will.ecopet.EntityClasses.OthersClasses.FirebaseData;
@@ -32,6 +33,7 @@ import java.util.List;
  */
 
 public class PageAdapterFeedPhotos extends BaseAdapter {
+
     private List<Photo> myList = new ArrayList<>();
     private LayoutInflater inflater;
     private Context context;
@@ -104,15 +106,24 @@ public class PageAdapterFeedPhotos extends BaseAdapter {
             public void onClick(View view) {
                 PopupMenu popup = new PopupMenu(context, mViewHolder.btnReport);
                 popup.getMenuInflater().inflate(R.menu.menu_home, popup.getMenu());
+
                 popup.show();//showing popup menu
+
+                if(!currentListData.getUid_user().equals(FirebaseData.currentUser.getUid()))
+                    popup.getMenu().getItem(0).setVisible(false);
 
                 popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     public boolean onMenuItemClick(MenuItem item) {
-                        if(FirebaseData.currentUser.getReports().containsKey(currentListData.getUid_photo()))
-                            Toast.makeText(context, "Você já denunciou essa imagem", Toast.LENGTH_SHORT).show();
-                        else{
-                            ReportActivity.photo = currentListData;
-                            context.startActivity(new Intent(context,ReportActivity.class));
+                        if(item.getTitle().equals("Denunciar")){
+                            if(FirebaseData.currentUser.getReports().containsKey(currentListData.getUid_photo()))
+                                Toast.makeText(context, "Você já denunciou essa imagem", Toast.LENGTH_SHORT).show();
+                            else{
+                                ReportActivity.photo = currentListData;
+                                context.startActivity(new Intent(context,ReportActivity.class));
+                            }
+                        } else if(item.getTitle().equals("Editar")){
+                            EditPhotoActivity.photo = currentListData;
+                            context.startActivity(new Intent(context,EditPhotoActivity.class));
                         }
                         return true;
                     }

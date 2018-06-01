@@ -107,7 +107,7 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="60dp">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:text="Descrição:"
@@ -118,6 +118,7 @@
                 android:layout_height="wrap_content" />
 
             <TextView
+                android:layout_marginBottom="5dp"
                 android:id="@+id/outputDescriptionPhoto"
                 android:textColor="#000"
                 android:layout_marginLeft="20dp"

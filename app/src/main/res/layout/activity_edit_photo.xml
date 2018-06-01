@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/DefaultColor"
+    tools:context="com.ecopet.will.ecopet.BoundaryClasses.ActivitiesClasses.EditPhotoActivity">
+
+    <TextView
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        android:text="Editar Publicação"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:textSize="14sp"
+            android:textAlignment="center"
+            android:id="@+id/text_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnSaveEdit"
+            android:textColor="#fff"
+            android:paddingHorizontal="20dp"
+            android:background="@drawable/corner_green"
+            android:layout_gravity="center"
+            android:text="SALVAR ALTERAÇÕES"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <include
+        android:visibility="gone"
+        layout="@layout/loading"/>
+
+</RelativeLayout>

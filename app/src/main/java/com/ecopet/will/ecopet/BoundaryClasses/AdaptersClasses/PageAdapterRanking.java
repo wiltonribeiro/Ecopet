@@ -37,7 +37,7 @@ public class PageAdapterRanking extends BaseAdapter {
 
     @Override
     public UserLikeRanking getItem(int position) {
-        return myList.get(position);
+        return  myList.get(getCount() - position - 1);
     }
 
     @Override

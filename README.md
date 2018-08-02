@@ -16,12 +16,12 @@ No seguinte exemplo o ranking é solicitado para ser visualizado. A contagem de 
 
 
 #### Perfil
-No seguinte exemplo o perfil carrega todoas as fotos publicadas pelo usuário atual. Ao pressionar a foto por um pequeno instante é dado as possiblidades de exclusão e compartilhamento em otras redes sociais.
+No seguinte exemplo o perfil carrega todoas as fotos publicadas pelo usuário atual. Ao pressionar a foto por um pequeno instante é dado as possiblidades de exclusão e compartilhamento em outras redes sociais.
 
 <img src="https://github.com/wiltonribeiro/ecoPET/blob/master/Preview/ProfilePreview.gif" width="300" height="auto">
 
-#### Denuncia
-Para evitar que hava publicações indevidas, há em cada publicação a possiblidade de denuncia. A denúncia carrega em si os dados da imagem, o nível/tipo de denúncia, quem solicitou e o autor da publicação. Dependendo da gravidade da denúncia, a imagem é automaticamente arquivada, mas não excluida, para observação dos administradores. Cada denuncia possui um peso, e cada denuncia e peso correspondente é registrado ao usuário autor, para que seja possível o registro do uso indevido e possível banimento da aplicação.
+#### Denúncia
+Para evitar que haja publicações indevidas, há em cada publicação a possiblidade de denúncia. A denúncia carrega em si os dados da imagem, o nível/tipo de denúncia, quem solicitou e o autor da publicação. Dependendo da gravidade da denúncia, a imagem é automaticamente arquivada, mas não excluida, para observação dos administradores. Cada denúncia possui um peso, e cada denúncia é registrado com o peso correspondente ao usuário autor, para que seja possível o registro do uso indevido e possível banimento da aplicação.
 
 <img src="https://github.com/wiltonribeiro/ecoPET/blob/master/Preview/ReportPreview.gif" width="300" height="auto">
 
@@ -34,7 +34,3 @@ No exemplo a seguir, há a publicação de uma foto por parte do usuário. A fot
 A aplicação está sendo desenvolvida como ativade do PET-TI Conexão de Saberes, Campus Quixadá. O responsável pelo desenvolvimento têm sido o aluno Wilton Neto do curso de Engenharia de Software. A aplicação é de caréter mobile com desenvolvimento nativo, usando a linguagem de programação Java.
 
 <img src="https://github.com/wiltonribeiro/ecoPET/blob/master/Preview/AboutPreview.gif" width="300" height="auto">
-
-
-
-
